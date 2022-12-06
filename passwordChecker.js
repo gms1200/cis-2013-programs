@@ -16,7 +16,7 @@ var passwordCheckOld = function ()
   /* insert code
    * here
    */
-  //let less than 8
+  //check for inputs that are less than 8
   if (stringPassword.length < 8)
   {
     stringOutput = ("Password must be at least 8 characters. Please choose another.");
@@ -24,7 +24,7 @@ var passwordCheckOld = function ()
   }
   else
   {
-   //check array
+   //check array for bad password according to the terms provided
    for (var a = 0; a <= stringPassword.length; a++)
    {
     if (stringPassword === arrayBadPasswords[a])
@@ -37,6 +37,7 @@ var passwordCheckOld = function ()
     {
       stringOutput = ("Password meets all criteria.");
       $("output").value = stringOutput;
+        //output to the textbox
     }
    }
   }
